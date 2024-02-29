@@ -1,50 +1,64 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Rice and Water Calculator</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
 
-<body>
+  <body>
     <h1>how to cook rice</h1>
-    <h2>i am bad at cooking rice.</br>i made this to help me cook rice.</br>i hope it helps you cook rice too.</h2>
+    <h2>
+      i am bad at cooking rice.<br />i made this to help me cook rice.<br />i
+      hope it helps you cook rice too.
+    </h2>
     <label for="riceType">what rice you cooking?</label>
     <select id="riceType">
-        <option value="white">white</option>
-        <option value="brown">brown</option>
-        <option value="basmati">basmati</option>
-        <option value="jasmine">jasmine</option>
-        <option value="sushi">sushi</option>
+      <option value="white">white</option>
+      <option value="brown">brown</option>
+      <option value="basmati">basmati</option>
+      <option value="jasmine">jasmine</option>
+      <option value="sushi">sushi</option>
     </select>
-    <div class="helper-text">don't over think it, rice is rice
-    </div>
-    </br>
-    <label for="riceCups">how many baseballs of cooked rice do you want to eat?</label>
-    <input type="number" id="riceCups" min="1" value="1" oninput="checkBasketball()">
+    <div class="helper-text">don't over think it, rice is rice</div>
+    <br />
+    <label for="riceCups"
+      >how many baseballs of cooked rice do you want to eat?</label
+    >
+    <input
+      type="number"
+      id="riceCups"
+      min="1"
+      value="1"
+      oninput="checkBasketball()"
+    />
     <div id="basketballMessage"></div>
-    </br>
+    <br />
     <label for="unit">how are we measuring our uncooked rice?</label>
     <select id="unit" onchange="checkMeasurement()">
-        <option value="ml">in ml</option>
-        <option value="g">in grams</option>
-        <option value="cup">in us cups</option>
-        <option value="tbsp">tablespoons</option>
-        <option value="tsp">teaspoons</option>
+      <option value="ml">in ml</option>
+      <option value="g">in grams</option>
+      <option value="cup">in us cups</option>
+      <option value="tbsp">tablespoons</option>
+      <option value="tsp">teaspoons</option>
     </select>
     <div id="measureMessage"></div>
-    </br>
+    <br />
     <button onclick="calculate()">Calculate</button>
-    </br>
+    <br /><br />
     <h2>you need:</h2>
-    <p>the numbers will appear here when you hit the button. i can't make this text vanish after you push it so just
-        roll with it.</p>
+
+    <p>
+      the numbers will appear here when you hit the button. i can't make this
+      text vanish after you push it so just roll with it.
+    </p>
     <div id="result"></div>
 
-    <p>if this helps you cook rice then please</p><a href="https://www.buymeacoffee.com/edthedesigner"> help me buy a
-        rice cooker</a>
+    <p>if this helps you cook rice then please</p>
+    <a href="https://www.buymeacoffee.com/edthedesigner">
+      help me buy a rice cooker</a
+    >
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
