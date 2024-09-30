@@ -6,6 +6,7 @@ function calculate() {
   let riceResult = 0;
   let waterResult = 0;
   let waterRatio;
+  let cookingTime;
 
   // Convert rice cups to the selected unit
   switch (unit) {
@@ -32,10 +33,31 @@ function calculate() {
   }
   waterResult = waterRatio * riceCups;
 
+  // Set playful cooking time messages based on rice type
+  switch (riceType) {
+    case "white":
+      cookingTime = "15–20 minutes to wonder if it's done.";
+      break;
+    case "brown":
+      cookingTime = "40–50 minutes to question why you didn't choose white rice.";
+      break;
+    case "basmati":
+      cookingTime = "15 minutes to convince yourself basmati is more sophisticated than white rice.";
+      break;
+    case "jasmine":
+      cookingTime = "15 minutes to be fooled in to thinking you can cook because it smells good.";
+      break;
+    case "sushi":
+      cookingTime = "18–20 minutes to stress about it sticking.";
+      break;
+  }
+
   document.getElementById(
     "result"
-  ).innerText = `${riceResult} ${unit} of rice \n ${waterResult} ${unit} of water \n a good amount of luck`;
+  ).innerText = `${riceResult} ${unit} of rice \n ${waterResult} ${unit} of water \n ${cookingTime}`;
 }
+
+
 
 function getWaterRatio(riceType, conversionFactor) {
   switch (riceType) {
